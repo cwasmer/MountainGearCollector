@@ -13,6 +13,8 @@
 		4573D0B31E6C27330027B646 /* MountainGearCollection.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4573D0B11E6C27330027B646 /* MountainGearCollection.xcdatamodeld */; };
 		4573D0B51E6C27330027B646 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4573D0B41E6C27330027B646 /* Assets.xcassets */; };
 		4573D0B81E6C27330027B646 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4573D0B61E6C27330027B646 /* LaunchScreen.storyboard */; };
+		4573D0C01E6C2C5B0027B646 /* ms-MeexdI.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4573D0BF1E6C2C5B0027B646 /* ms-MeexdI.gif */; };
+		4573D0C21E6C2D6A0027B646 /* AddGearViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4573D0C11E6C2D6A0027B646 /* AddGearViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		4573D0B41E6C27330027B646 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4573D0B71E6C27330027B646 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4573D0B91E6C27330027B646 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4573D0BF1E6C2C5B0027B646 /* ms-MeexdI.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "ms-MeexdI.gif"; sourceTree = "<group>"; };
+		4573D0C11E6C2D6A0027B646 /* AddGearViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddGearViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +60,10 @@
 		4573D0A91E6C27330027B646 /* MountainGearCollection */ = {
 			isa = PBXGroup;
 			children = (
+				4573D0BF1E6C2C5B0027B646 /* ms-MeexdI.gif */,
 				4573D0AA1E6C27330027B646 /* AppDelegate.swift */,
 				4573D0AC1E6C27330027B646 /* ViewController.swift */,
+				4573D0C11E6C2D6A0027B646 /* AddGearViewController.swift */,
 				4573D0AE1E6C27330027B646 /* Main.storyboard */,
 				4573D0B41E6C27330027B646 /* Assets.xcassets */,
 				4573D0B61E6C27330027B646 /* LaunchScreen.storyboard */,
@@ -128,6 +134,7 @@
 			files = (
 				4573D0B81E6C27330027B646 /* LaunchScreen.storyboard in Resources */,
 				4573D0B51E6C27330027B646 /* Assets.xcassets in Resources */,
+				4573D0C01E6C2C5B0027B646 /* ms-MeexdI.gif in Resources */,
 				4573D0B01E6C27330027B646 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4573D0AD1E6C27330027B646 /* ViewController.swift in Sources */,
+				4573D0C21E6C2D6A0027B646 /* AddGearViewController.swift in Sources */,
 				4573D0AB1E6C27330027B646 /* AppDelegate.swift in Sources */,
 				4573D0B31E6C27330027B646 /* MountainGearCollection.xcdatamodeld in Sources */,
 			);
