@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12078"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -35,9 +36,17 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="NPR-Kc-D2w">
+                        <nil key="title"/>
+                        <textField key="titleView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Mountain Gear" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="eGp-6W-1Ie">
+                            <rect key="frame" x="112.5" y="7" width="150" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Udb-az-ntg">
                             <connections>
-                                <segue destination="sh1-b5-UJt" kind="show" id="q6d-IA-TrN"/>
+                                <segue destination="sh1-b5-UJt" kind="show" identifier="gearSegue" id="q6d-IA-TrN"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -81,11 +90,21 @@
                                     <action selector="addTapped:" destination="sh1-b5-UJt" eventType="touchUpInside" id="xG8-7b-wf8"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2AQ-T8-Z9n">
+                                <rect key="frame" x="165" y="372" width="45" height="30"/>
+                                <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="addTapped:" destination="sh1-b5-UJt" eventType="touchUpInside" id="xyE-ke-v4X"/>
+                                    <action selector="deleteTapped:" destination="sh1-b5-UJt" eventType="touchUpInside" id="BGh-CT-zOb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="2AQ-T8-Z9n" firstAttribute="centerX" secondItem="VgW-lT-LFf" secondAttribute="centerX" id="8ka-6D-j4A"/>
                             <constraint firstItem="rHI-cx-BXy" firstAttribute="centerX" secondItem="VgW-lT-LFf" secondAttribute="centerX" id="Aca-6D-ucq"/>
                             <constraint firstItem="rHI-cx-BXy" firstAttribute="top" secondItem="OkX-W8-yeN" secondAttribute="bottom" constant="40" id="DTT-tb-C3P"/>
+                            <constraint firstItem="2AQ-T8-Z9n" firstAttribute="top" secondItem="CBN-Ud-Rza" secondAttribute="bottom" constant="18" id="JUm-4X-vq7"/>
                             <constraint firstItem="V0I-ht-wN1" firstAttribute="top" secondItem="rHI-cx-BXy" secondAttribute="bottom" constant="20" id="Lg1-O1-c0v"/>
                             <constraint firstItem="CBN-Ud-Rza" firstAttribute="centerX" secondItem="VgW-lT-LFf" secondAttribute="centerX" id="O2f-j0-FY1"/>
                             <constraint firstItem="V0I-ht-wN1" firstAttribute="centerX" secondItem="VgW-lT-LFf" secondAttribute="centerX" id="XoJ-nO-Xfb"/>
@@ -94,13 +113,22 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="C0H-rb-nue">
-                        <barButtonItem key="rightBarButtonItem" title="Photos" id="2Oc-UP-Zbx">
-                            <connections>
-                                <action selector="photosTapped:" destination="sh1-b5-UJt" id="EFi-VW-L5k"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="camera" id="nhc-wM-kT5">
+                                <connections>
+                                    <action selector="cameraTapped:" destination="sh1-b5-UJt" id="VLM-q3-Uwk"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Photos" id="2Oc-UP-Zbx">
+                                <connections>
+                                    <action selector="photosTapped:" destination="sh1-b5-UJt" id="EFi-VW-L5k"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="addUpdateButton" destination="CBN-Ud-Rza" id="li8-c7-ZrZ"/>
+                        <outlet property="deleteButton" destination="2AQ-T8-Z9n" id="n7Q-f3-d02"/>
                         <outlet property="gearImageView" destination="rHI-cx-BXy" id="Jb7-SX-nmM"/>
                         <outlet property="itemNameText" destination="V0I-ht-wN1" id="vTQ-Ak-Ind"/>
                     </connections>
